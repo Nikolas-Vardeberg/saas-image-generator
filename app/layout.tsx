@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/navbar";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${outfit.variable} antialiased`}
       >
         <main className="px-4 sm:px-10 md:px-14 lg:px-28 min-h-screen bg-gradient-to-b from-teal-50 to-orange-50">
+          <Navbar />
           {children}
         </main>
       </body>
